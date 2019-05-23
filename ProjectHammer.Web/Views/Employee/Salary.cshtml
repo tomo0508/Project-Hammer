@@ -1,0 +1,25 @@
+﻿@model ProjectHammer.Service.Models.EmployeePoco
+@{
+    ViewData["Title"] = "Salary";
+}
+
+<h1>Change salary</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ChangeSalary" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmployeeNo" class="control-label"></label>
+                <input asp-for="EmployeeNo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label value="salaryPercent" class="control-label">Salary percent</label>
+                <input name="salaryPercent" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Change" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
