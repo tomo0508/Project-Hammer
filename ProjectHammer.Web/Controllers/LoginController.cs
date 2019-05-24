@@ -15,8 +15,6 @@ namespace ProjectHammer.Web.Controllers
     {
         private readonly ILoginService loginService;
         private readonly IConfiguration config;
-        //private readonly IService<IEmployee> service;
-        //private readonly IDepartmentService departmentService;
         private readonly IMapper mapper;
 
         public LoginController(ILoginService loginService,IConfiguration config, IMapper mapper)
@@ -30,18 +28,6 @@ namespace ProjectHammer.Web.Controllers
         {
             return View();
         }
-        
-       /* public IActionResult Login(LoginPoco userForLoginDto)
-        {
-           
-            var userFromLogin = loginService.Login(userForLoginDto.LoginUserName.ToLower(), userForLoginDto.LoginPassword);
-            if (userFromLogin == null)
-                return Unauthorized();
-
-            
-            return RedirectToAction("Index", "Home");
-           // return View (userFromLogin);
-        }*/
 
         public IActionResult Login(string returnUrl = null)
         {
@@ -64,8 +50,8 @@ namespace ProjectHammer.Web.Controllers
 
                 var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
                 identity.AddClaim(new Claim(ClaimTypes.Name, userFromLogin.LoginUserName));
-            
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
 
                 if (returnUrl == null)
                 {
