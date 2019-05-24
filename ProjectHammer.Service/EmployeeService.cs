@@ -97,7 +97,9 @@ namespace ProjectHammer.Service
                 .Where(e => e.EmployeeNo == id)
                 .FirstOrDefaultAsync();
 
-            return mapper.Map<IEmployee>(employee);
+           var employeeToMap = mapper.Map<IEmployee>(employee);
+
+            return mapper.Map<EmployeePoco>(employeeToMap);
 
 
         }

@@ -98,7 +98,9 @@ namespace ProjectHammer.Service
                 .Include(e => e.Employees)
                 .FirstOrDefaultAsync(d => d.DepartmentNo == id);
 
-            return mapper.Map<IDepartment>(department);
+            var departmentToMap = mapper.Map<IDepartment>(department);
+
+            return mapper.Map<DepartmentPoco>(departmentToMap);
         }
 
         /// <summary>

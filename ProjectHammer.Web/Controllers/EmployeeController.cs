@@ -47,7 +47,7 @@ namespace ProjectHammer.Web.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var employee = await employeeService.GetEmployee(id);
-            //var employeeToReturn = mapper.Map<EmployeeViewModel>(employee);
+           
             if (employee == null)
             {
                 return NotFound();
