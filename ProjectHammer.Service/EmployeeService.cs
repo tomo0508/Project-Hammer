@@ -192,14 +192,6 @@ namespace ProjectHammer.Service
             //context.SaveChanges();
         }
 
-
-        public async Task<IEnumerable<IEmployee>> GetApi()
-        {
-            var employees = await context.Employees.ToListAsync();
-
-            return mapper.Map<IEnumerable<IEmployee>>(employees);
-        }
-
         #endregion
     }
 }

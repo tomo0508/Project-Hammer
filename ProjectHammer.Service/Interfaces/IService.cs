@@ -27,8 +27,5 @@ namespace ProjectHammer.Service.Interfaces
         /// </summary>
         /// <param name="entity">entity</param>
        Task Update(T entity);
-
-
-       Task <IEnumerable<T>> GetApi();
     }
 }

@@ -152,15 +152,6 @@ namespace ProjectHammer.Service
         }
 
 
-        public async Task<IEnumerable<IDepartment>> GetApi()
-        {
-            var departments = await context.Departments.ToListAsync();
-
-            var departmentsToReturn = mapper.Map<IEnumerable<IDepartment>>(departments);
-
-            return mapper.Map<IEnumerable<DepartmentPoco>>(departmentsToReturn);
-        }
-
         #endregion
     }
 }

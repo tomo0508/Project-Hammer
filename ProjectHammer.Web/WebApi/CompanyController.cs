@@ -10,30 +10,31 @@ namespace ProjectHammer.Web.WebApi
     [ApiController]
     public class CompanyController : ControllerBase
     {
-       
-        private readonly IService<IEmployee> employeeService;
-        private readonly IService<IDepartment> departmentService;
+
+        private readonly IEmployeeService employeeService;
+        private readonly IDepartmentService departmentService;
         private readonly IMapper mapper;
 
-        public CompanyController(IService<IEmployee> employeeService, IService<IDepartment> departmentService, IMapper mapper)
+        public CompanyController(IEmployeeService employeeService, IDepartmentService departmentService, IMapper mapper)
         {
 
             this.employeeService = employeeService;
             this.departmentService = departmentService;
             this.mapper = mapper;
+          
 
         }
         [HttpGet("employees")]
         public async Task<ActionResult<IEnumerable<IEmployee>>> GetEmployees()
         {
-            var employees = await employeeService.GetApi();          
+            var employees = await employeeService.GetEmployees();          
             return Ok(employees);
         }
 
         [HttpGet("departments")]
         public async Task<ActionResult<IEnumerable<IDepartment>>> GetDepartments()
         {
-            var departments = await departmentService.GetApi();
+            var departments = await departmentService.GetDepartments();
             return Ok(departments);
         }
     }
