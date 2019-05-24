@@ -154,9 +154,11 @@ namespace ProjectHammer.Service
 
         public async Task<IEnumerable<IDepartment>> GetApi()
         {
-            var departments = context.Departments.FindAsync();
+            var departments = await context.Departments.ToListAsync();
 
-            return mapper.Map<IEnumerable<DepartmentPoco>>(departments);
+            var departmentsToReturn = mapper.Map<IEnumerable<IDepartment>>(departments);
+
+            return mapper.Map<IEnumerable<DepartmentPoco>>(departmentsToReturn);
         }
 
         #endregion

@@ -195,7 +195,7 @@ namespace ProjectHammer.Service
 
         public async Task<IEnumerable<IEmployee>> GetApi()
         {
-            var employees = await context.Employees.FindAsync();
+            var employees = await context.Employees.ToListAsync();
 
             return mapper.Map<IEnumerable<IEmployee>>(employees);
         }
