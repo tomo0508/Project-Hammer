@@ -5,6 +5,10 @@ using System.Text;
 
 namespace ProjectHammer.Service.Models
 {
+
+    /// <summary>
+    /// DepartmentViewPoco class
+    /// </summary>
   public  class DepartmentViewPoco
     {
         /// <summary>

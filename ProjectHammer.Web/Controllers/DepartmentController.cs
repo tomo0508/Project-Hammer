@@ -36,7 +36,6 @@ namespace ProjectHammer.Web.Controllers
 
             var developmentEmployees = await departmentService.GetDevelopmentEmployees();
             var departmentsWithMoreEmployees = await departmentService.GetDepartmentEmployees();
-
             var departmentsView = await departmentService.GetDepartmentsView();
 
             ViewBag.DevelopmentDepartment = developmentEmployees;

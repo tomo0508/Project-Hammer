@@ -153,6 +153,11 @@ namespace ProjectHammer.Service
             return mapper.Map<IList<IDepartment>>(result); ;
         }
 
+
+        /// <summary>
+        /// Gets view 
+        /// </summary>
+        /// <returns>departments</returns>
         public async Task<IList<IDepartmentView>> GetDepartmentsView()
         {
             var result = await context.vwDepartment.FromSql("SELECT * FROM vwDepartment").ToListAsync();
