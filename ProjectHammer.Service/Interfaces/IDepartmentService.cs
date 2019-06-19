@@ -34,5 +34,12 @@ namespace ProjectHammer.Service.Interfaces
         /// </summary>
         /// <returns>Departments</returns>
        Task< IList<IDepartment>> GetDevelopmentEmployees();
+
+
+        /// <summary>
+        /// Gets Departments
+        /// </summary>
+        /// <returns>Departments</returns>
+        Task<IList<IDepartmentView>> GetDepartmentsView();
     }
 }

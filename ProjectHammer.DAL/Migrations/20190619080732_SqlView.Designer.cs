@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectHammer.DAL;
 
 namespace ProjectHammer.DAL.Migrations
 {
     [DbContext(typeof(CompanyContext))]
-    partial class CompanyContextModelSnapshot : ModelSnapshot
+    [Migration("20190619080732_SqlView")]
+    partial class SqlView
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -115,7 +117,7 @@ namespace ProjectHammer.DAL.Migrations
                             EmployeeNo = 1,
                             DepartmentNo = 4,
                             EmployeeName = "Fred Davies",
-                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 958, DateTimeKind.Local).AddTicks(8750),
+                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 957, DateTimeKind.Local).AddTicks(4665),
                             Salary = 50000f
                         },
                         new
@@ -123,7 +125,7 @@ namespace ProjectHammer.DAL.Migrations
                             EmployeeNo = 2,
                             DepartmentNo = 3,
                             EmployeeName = "Bernard Katic",
-                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 958, DateTimeKind.Local).AddTicks(8909),
+                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 957, DateTimeKind.Local).AddTicks(4803),
                             Salary = 50000f
                         },
                         new
@@ -131,7 +133,7 @@ namespace ProjectHammer.DAL.Migrations
                             EmployeeNo = 3,
                             DepartmentNo = 5,
                             EmployeeName = "Rich Davies",
-                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 958, DateTimeKind.Local).AddTicks(8964),
+                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 957, DateTimeKind.Local).AddTicks(4858),
                             Salary = 30000f
                         },
                         new
@@ -139,7 +141,7 @@ namespace ProjectHammer.DAL.Migrations
                             EmployeeNo = 4,
                             DepartmentNo = 6,
                             EmployeeName = "Eva Dobos",
-                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 958, DateTimeKind.Local).AddTicks(9011),
+                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 957, DateTimeKind.Local).AddTicks(5002),
                             Salary = 30000f
                         },
                         new
@@ -147,7 +149,7 @@ namespace ProjectHammer.DAL.Migrations
                             EmployeeNo = 5,
                             DepartmentNo = 8,
                             EmployeeName = "Mario Hunjadi",
-                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 958, DateTimeKind.Local).AddTicks(9058),
+                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 957, DateTimeKind.Local).AddTicks(5181),
                             Salary = 25000f
                         },
                         new
@@ -155,7 +157,7 @@ namespace ProjectHammer.DAL.Migrations
                             EmployeeNo = 6,
                             DepartmentNo = 7,
                             EmployeeName = "Jean Michele",
-                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 958, DateTimeKind.Local).AddTicks(9102),
+                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 957, DateTimeKind.Local).AddTicks(5264),
                             Salary = 25000f
                         },
                         new
@@ -163,7 +165,7 @@ namespace ProjectHammer.DAL.Migrations
                             EmployeeNo = 7,
                             DepartmentNo = 1,
                             EmployeeName = "Bill Gates",
-                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 958, DateTimeKind.Local).AddTicks(9147),
+                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 957, DateTimeKind.Local).AddTicks(5311),
                             Salary = 25000f
                         },
                         new
@@ -171,7 +173,7 @@ namespace ProjectHammer.DAL.Migrations
                             EmployeeNo = 8,
                             DepartmentNo = 3,
                             EmployeeName = "Maja Janic",
-                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 958, DateTimeKind.Local).AddTicks(9190),
+                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 957, DateTimeKind.Local).AddTicks(5420),
                             Salary = 30000f
                         },
                         new
@@ -179,7 +181,7 @@ namespace ProjectHammer.DAL.Migrations
                             EmployeeNo = 9,
                             DepartmentNo = 3,
                             EmployeeName = "Igor Horvat",
-                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 958, DateTimeKind.Local).AddTicks(9236),
+                            LastModifyDate = new DateTime(2019, 6, 19, 10, 7, 32, 957, DateTimeKind.Local).AddTicks(5469),
                             Salary = 35000f
                         });
                 });

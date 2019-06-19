@@ -14,6 +14,7 @@ namespace ProjectHammer.Service.Mapping
                 cfg.CreateMap<Department, DepartmentPoco>();
                 cfg.CreateMap<Employee, EmployeePoco>();
                 cfg.CreateMap<Login, LoginPoco>();
+                cfg.CreateMap<DepartmentView, DepartmentViewPoco>();
             });
 
           

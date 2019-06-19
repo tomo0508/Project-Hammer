@@ -42,11 +42,15 @@
 </table>
 <div>
     <div>
-        <table class="table">
+        <div>
             <p>
                 <a>Department locations with more than one employee </a>
             </p>
+        </div>
+        <table class="table">
+           
             <thead>
+               
                 <tr>
                     <th>
                         @Html.DisplayNameFor(model => model.DepartmentLocation)
@@ -73,12 +77,16 @@
                     }
                 }
             </tbody>
+            </table>
     </div>
     <div>
-        <table class="table">
+        <div>
             <p>
                 <a>"Development" department locations and number of employees </a>
             </p>
+        </div>
+        <table class="table">
+            
             <thead>
                 <tr>
                     <th>
@@ -106,5 +114,43 @@
                     }
                 }
             </tbody>
+        </table>
+    </div>
+
+    <div>
+        <div>
+            <p>
+                <a>Department View </a>
+            </p>
+        </div>
+        <table class="table">         
+            <thead>
+                <tr>
+                    <th>
+                       Department No
+                    </th>
+                    <th>
+                       Department description
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var getDepartmentsView = ViewBag.DepartmentsView as IEnumerable<ProjectHammer.Service.Interfaces.IDepartmentView>;
+                    @foreach (var item in getDepartmentsView)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => item.DepartmentNo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => item.DepartmentDescription)
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
     </div>
 </div>

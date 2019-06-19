@@ -15,7 +15,7 @@ namespace ProjectHammer.DAL
         public virtual DbSet<Login> Logins { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
-
+        public virtual DbQuery<DepartmentView> vwDepartment { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,7 +26,7 @@ namespace ProjectHammer.DAL
             modelBuilder.ApplyConfiguration(new LoginConfiguration());
             modelBuilder.ApplyConfiguration(new DepartmentConfiguration());
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
-          
+           
 
             modelBuilder.Entity<Login>().HasData(new Login { LoginNo = 1, LoginUserName = "Bill", LoginPassword = "ItsNotSoft" });
             modelBuilder.Entity<Login>().HasData(new Login { LoginNo = 2, LoginUserName = "Jean", LoginPassword = "trollsRule" });
