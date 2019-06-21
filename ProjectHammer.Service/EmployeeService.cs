@@ -128,6 +128,7 @@ namespace ProjectHammer.Service
             var names = typeof(IEmployee).GetProperties()
                         .Select(property => property.Name)
                         .ToArray();
+
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("+---------------+---------------+---------------+---------------+\n");
             foreach (var item in names.Where((item, index) => index < 4))
@@ -144,7 +145,7 @@ namespace ProjectHammer.Service
                 stringBuilder.AppendLine();
 
             }
-
+            stringBuilder.Append("+---------------+---------------+---------------+---------------+");
             return stringBuilder.ToString();
 
         }

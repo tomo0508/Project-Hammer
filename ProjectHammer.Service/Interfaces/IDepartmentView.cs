@@ -15,7 +15,7 @@ namespace ProjectHammer.Service.Interfaces
         int DepartmentNo { get; set; }
 
         /// <summary>
-        /// Gets or sets Department location
+        /// Gets or sets Department description
         /// </summary>
         string DepartmentDescription { get; set; }
     }
